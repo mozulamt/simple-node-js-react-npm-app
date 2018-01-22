@@ -1,7 +1,8 @@
 pipeline {
     agent {
         docker {
-            image ('node:6-alpine').customWorkspace {
+            image ('node:6-alpine')
+            customWorkspace {
                 withEnv([
                     'npm_config_cache=npm-cache',
                     'HOME=.',
